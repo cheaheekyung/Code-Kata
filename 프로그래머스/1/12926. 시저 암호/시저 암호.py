@@ -4,16 +4,10 @@ def solution(s, n) :
     alp = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
 
     for i in s :
-        if i in ALP :
-            if (ALP.index(i)+n) < len(ALP) :
-                answer += ALP[ALP.index(i)+n]
-            else : 
-                answer += ALP[ALP.index(i)+n-len(ALP)]
+        if i in ALP : 
+            answer += ALP[(ALP.index(i) + n) % len(ALP)]
         elif i in alp :
-            if (alp.index(i)+n) < len(alp) :
-                answer += alp[alp.index(i)+n]
-            else :
-                answer += alp[alp.index(i)+n-len(alp)]
+            answer += alp[(alp.index(i) + n) % len(alp)]
         elif i == ' ' :
             answer += ' '
     return answer

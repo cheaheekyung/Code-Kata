@@ -1,7 +1,6 @@
 def solution(name, yearning, photo):
     answer = []
     a_dict = dict(zip(name,yearning))
-    score = 0
     
     for i in photo :
         score = 0

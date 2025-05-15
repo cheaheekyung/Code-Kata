@@ -8,7 +8,6 @@ def solution(n, m):
     for i in range(1,m+1) :
         if n * i % m ==0 :
             b.append(n*i)
-    if not b :
-        b.append(n*m)
+
     answer = [max(a), min(b)]
     return answer

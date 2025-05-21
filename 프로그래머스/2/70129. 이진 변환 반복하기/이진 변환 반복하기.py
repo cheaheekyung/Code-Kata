@@ -2,8 +2,7 @@ def solution(s):
     answer = []
     count = 0
     count1 = 0
-    while len(s) != 1:
-
+    while s != '1':
         count += s.count('0')
         s = s.replace('0','')
         s = bin(len(s))[2:]

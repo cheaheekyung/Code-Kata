@@ -1,5 +1,3 @@
-def solution(numbers):
-    answer = 0
-    a = sorted(numbers)
-    answer = a[-1] * a[-2]
-    return answer
+def solution(numbers) :
+    numbers.sort()
+    return numbers[-1]*numbers[-2]

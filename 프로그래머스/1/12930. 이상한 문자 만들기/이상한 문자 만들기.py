@@ -1,16 +1,16 @@
 def solution(s):
-    answer = ''
+    answer = []
     ind = 0
     a = s.lower()
     for i in range(len(a)) :
         if a[i].isalpha() == False:
-            answer += a[i]
+            answer.append(a[i])
             ind = 0
         else :
             ind += 1
             if ind % 2 != 0 :
-                answer += a[i].upper()
+                answer.append(a[i].upper())
             else :
-                answer += a[i]
+                answer.append(a[i])
                 
-    return answer
+    return ''.join(answer)
